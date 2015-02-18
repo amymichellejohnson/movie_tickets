@@ -1,19 +1,13 @@
-describe("BankAccount", function() {
+describe("Ticket", function() {
 
-  describe("deposit", function() {
-    it("will add the amount to the balance", function() {
-      var testBankAccount = Object.create(BankAccount);
-      testBankAccount.deposit(10);
-      expect(testBankAccount.balance).to.equal(10);
+  describe("age", function() {
+    it("set a price depentant on age entered", function() {
+      var testTicket = Object.create(Ticket);
+      testTicket.age("child");
+      expect(testTicket.price).to.equal(8);
     });
   });
-  describe("withdraw", function() {
-    it("will subtract the amount from the balance", function() {
-      var testBankAccount = Object.create(BankAccount);
-      testBankAccount.withdraw(10);
-      expect(testBankAccount.balance).to.equal(-10);
-    });
-  });
+
 
 
 });
