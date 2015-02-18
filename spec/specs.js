@@ -29,10 +29,26 @@ describe("Ticket", function() {
     it("sets a price for a matinee", function() {
       var testTicket = Object.create(Ticket);
       testTicket.time("matinee");
-      expect(testTicket.price).to.equal(10);      
+      expect(testTicket.price).to.equal(10);
     });
   });
 
+  describe("release", function() {
+    it("sets a price based on year of release", function() {
+      var testTicket = Object.create(Ticket);
+      testTicket.release("2012");
+      expect(testTicket.price).to.equal(7);
+    });
+  });
 
-
+  describe("priceValidate", function() {
+    it("sets the minimum price to 4$", function() {
+     var testTicket = Object.create(Ticket);
+     testTicket.age("child");
+     testTicket.release("2010");
+     testTicket.time("matinee");
+     testTicket.priceValidate();
+     expect(testTicket.price).to.equal(4);
+    });
+  });
 });
