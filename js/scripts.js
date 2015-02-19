@@ -37,11 +37,17 @@ $(function() {
     newTicket.age(age);
     newTicket.priceValidate();
 
-    // if (newTicket.price < 4) {
-    //   newTicket.price = 4;
-    // }
-
-    $("#price").text(newTicket.price);
+    $("#new-price").show()
+    $("#price").text("$ " + newTicket.price);
+    if (release === 1994) {
+      $("#img").html("<img class='img' src='css/img/pulp.jpg'>")
+    } else if (release === 1984) {
+      $("#img").html("<img class='img' src='css/img/gremlins.jpg'>")
+    } else if (release === 2014) {
+      $("#img").html("<img class='img' src='css/img/inherent-vice.jpg'>")
+    } else {
+      $("#img").html("<img class='img' src='css/img/shogun-assassin.jpg'>")
+    };
 
     $("#release").val("")
     $("#time").val("")

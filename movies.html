@@ -1,56 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Orbitron:700,400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-1.11.2.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Ticket Center</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Century 23</h1>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-1.11.2.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Ticket Center</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculate a ticket price</h1>
 
+    <div class="row">
+      <div class="col-md-6">
+        <form id="age-time-release">
+          <div class="form-group">
+            <label for="release">Movie</label>
+            <select id="release">
+              <option value="">Select a movie</option>
+              <option value="1994">Pulp Fiction</option>
+              <option value="1984">Gremlins</option>
+              <option value="2014">Inherent Vice</option>
+              <option value="1980">Shogun Assassin</option>
+            </select>
+          </div>
 
-          <form id="age-time-release">
-            <div class="form-group">
-              <label for="release">Movie</label>
-              <select id="release">
-                <option value="">Select a movie</option>
-                <option value="2015">Puff Puff 2</option>
-                <option value="1984">Grimlins</option>
-                <option value="2014">Puff Puff</option>
-              </select>
-            </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <select id="time">
+              <option value="">Select a time</option>
+              <option value="matinee">3:00 pm</option>
+              <option value="evening">5:30 pm</option>
+              <option value="evening">8:00 pm</option>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <label for="time">Time</label>
-              <select id="time">
-                <option value="">Select a time</option>
-                <option value="matinee">3:00 pm</option>
-                <option value="evening">5:30 pm</option>
-                <option value="evening">8:00 pm</option>
-              </select>
-            </div>
+          <div class = "form-group">
+            <label for="age">Age</label>
+            <select id="age">
+              <option value="">Select a ticket-type</option>
+              <option value="adult">Adult</option>
+              <option value="child">Child</option>
+              <option value="senior">Senior</option>
+            </select>
+          </div>
 
-            <div class = "form-group">
-              <label for="age">Age</label>
-              <select id="age">
-                <option value="">Select a ticket-type</option>
-                <option value="adult">Adult</option>
-                <option value="child">Child</option>
-                <option value="senior">Senior</option>
-              </select>
-            </div>
+          <button type="submit" class="btn">Calculate total</button>
+        </form>
+      </div>
+      <div class ="col-md-6">
+      <img class='picture' src='css/img/pop.png'>
 
-            <button type="submit" class="btn">Calculate total</button>
-          </form>
+      </div>
+    </div>
 
-        <div id="new-price">
-          <h4>Your ticket price is:</h4>
-          <p><span id="price"></span></p>
-        </div>
+    <div id="new-price">
+      <h4>Your ticket price is:</h4>
+      <p><span id="price"></span></p>
+      <span id="img"></span>
+
+    </div>
 
   </body>
-</html>
+  </html>
